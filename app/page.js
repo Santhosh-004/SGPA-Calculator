@@ -10,7 +10,7 @@ export default function Page() {
       <div>
         <h1 className="text-4xl font-bold text-center">SRM SGPA Calculator</h1>
       </div>
-      <div className='w-2/3 mx-auto mt-4'>
+      <div className='w-3/4 mx-auto mt-4'>
         <Form/>
       </div>
     </div>
