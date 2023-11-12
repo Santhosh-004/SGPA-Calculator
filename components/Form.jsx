@@ -89,6 +89,14 @@ function Form() {
           })}
           <div className="flex flex-row space-x-3">
             <Button
+              color="success"
+              variant="flat"
+              className="w-3/5 h-14 text-xl"
+              onClick={() => calculate()}
+            >
+              Calculate
+            </Button>
+            <Button
               color="primary"
               variant="flat"
               className="w-2/5 h-14 text-xl"
@@ -96,30 +104,29 @@ function Form() {
             >
               Add Course
             </Button>
-            <Button
-              color="success"
-              variant="flat"
-              className="w-3/5 h-14 text-xl"
-              onClick={() => (
-                calculate()
-              )}
-            >
-              Calculate
-            </Button>
           </div>
         </form>
-        
+
         {sgpa != -1 ? (
-            <div className="text-center">
-                <Round sgpa={sgpa}/>
-                <Button variant="bordered" color="danger" className="mt-5 text-xl w-32" onClick={()=>{reset()}}>Reset</Button>
-            </div>
-        ):(<div></div>)}
-        
+          <div className="text-center">
+            <Round sgpa={sgpa} />
+            <Button
+              variant="bordered"
+              color="danger"
+              className="mt-5 text-xl w-32"
+              onClick={() => {
+                reset();
+              }}
+            >
+              Reset
+            </Button>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     </>
   );
-  
 }
 
 export default Form;
